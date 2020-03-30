@@ -1,5 +1,23 @@
 
 class ListMediaComponent extends Component {
+
+        constructor(props) {
+            super(props)
+            this.refreshMedia = this.refreshMedia.bind(this)
+        }
+        componentDidMount() {
+            this.refreshMedia();
+        }
+        refreshMedia() {
+            MediaDataService.retrieveAllMedia(USER)
+                .then(
+                    response => {
+                        console.log(response);
+                    }
+                )
+        }
+    
+    
     render() {
         return (
             <div className="container">
