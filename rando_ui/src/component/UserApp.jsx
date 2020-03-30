@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 
 class UserApp extends Component {
-  render() {
+  render() { <>
     return <h1>User Application</h1>;
+        <ListMediaComponent />
+        </>
   }
 }
 
